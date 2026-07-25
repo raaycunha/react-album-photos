@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import type { Photo } from "../types/AlbumTypes";
 
 export const useAlbum = () => {
@@ -8,7 +8,7 @@ export const useAlbum = () => {
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [error, setError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const requestApi = async (searchUser: string) => {
+  const requestApi = useCallback(async (searchUser: string) => {
     try {
       setError(false);
       setIsLoading(true);
@@ -31,7 +31,7 @@ export const useAlbum = () => {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
   return {
     requestApi,
     error,

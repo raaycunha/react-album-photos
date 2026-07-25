@@ -7,8 +7,8 @@ const Header = () => {
   const [barSearch, setBarSearch] = useState<string>("");
   const [category, setCategory] = useState<string>("nature");
   useEffect(() => {
-    requestApi("nature");
-  }, []);
+    requestApi(category);
+  }, [requestApi, category]);
   const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (barSearch.trim().length <= 0) {
@@ -63,7 +63,6 @@ const Header = () => {
         value={category}
         onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
           setCategory(e.target.value);
-          requestApi(e.target.value);
         }}
       >
         <option value="sports">Esportes</option>
