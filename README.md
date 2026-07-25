@@ -1,75 +1,112 @@
-# React + TypeScript + Vite
+# 📸 React Album Photos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite)
+![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-Currently, two official plugins are available:
+Uma aplicação web desenvolvida com **React**, **TypeScript** e **Tailwind CSS** que permite pesquisar e visualizar imagens utilizando a **API da Pexels**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O projeto foi criado com o objetivo de praticar consumo de APIs REST, gerenciamento de estado com Context API, tipagem com TypeScript e organização de aplicações React.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Demonstração
 
-## Expanding the ESLint configuration
+🔗 **Deploy:** https://album-photos-dusky.vercel.app/
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📷 Preview
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+<img width="1901" height="990" alt="{6B9FE374-D049-4FAB-99A9-964E6B511EC6}" src="https://github.com/user-attachments/assets/c4211ebf-5580-4141-8d42-2f9153bb9369" />
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
+## ✨ Funcionalidades
+
+- 🔍 Pesquisa de imagens por palavra-chave
+- 📂 Pesquisa rápida por categorias
+- 🖼️ Visualização das imagens em modal
+- 📱 Interface responsiva
+- ⚡ Lazy Loading nas imagens
+- 🚫 Tratamento de erros para pesquisas inválidas
+- ♿ Boas práticas de acessibilidade
+
+---
+
+## 🛠️ Tecnologias
+
+- React
+- TypeScript
+- Tailwind CSS
+- Vite
+- Axios
+- Context API
+- Pexels API
+- Lucide React
+
+---
+
+## 📂 Estrutura do projeto
+
+```text
+src
+├── components
+│   ├── Footer
+│   ├── Header
+│   ├── Hero
+│   └── Layout
+├── contexts
+├── hooks
+├── types
+└── App.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📚 Conceitos praticados
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Durante o desenvolvimento deste projeto foram aplicados conceitos importantes do ecossistema React:
 
-```
+- Consumo de APIs REST com Axios
+- Context API para compartilhamento de estado
+- Custom Hooks
+- Tipagem com TypeScript
+- Organização de componentes
+- Gerenciamento de estados de carregamento e erro
+- Renderização dinâmica de listas
+- Lazy Loading
+- Responsividade com Tailwind CSS
+- Controle de modal
+- Git Flow com Feature Branches e Pull Requests
+
+---
+
+## 📈 Qualidade
+
+Durante o desenvolvimento também foram utilizados:
+
+- Git e GitHub
+- Feature Branches
+- Pull Requests
+- Code Review
+- Lighthouse para análise de Performance, Acessibilidade, SEO e Boas Práticas
+
+---
+
+## 📡 API
+
+Este projeto utiliza a **Pexels API**.
+
+https://www.pexels.com/api/
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Ray Cunha**.
+
+- GitHub: https://github.com/raaycunha
+- LinkedIn: https://www.linkedin.com/in/raaycunha/
