@@ -28,11 +28,13 @@ const Header = () => {
         className="flex justify-center items-center gap-2"
       >
         {error && (
-          <span className="text-red-500 mr-4">Termo de pesquisa inválido.</span>
+          <span className="text-red-500 mr-4 hidden md:block">
+            Termo de pesquisa inválido.
+          </span>
         )}
         <input
           disabled={isLoading || isActive}
-          className="bg-[#fafafa] px-2 h-10 rounded-lg placeholder:text-[#383D3B]"
+          className={`bg-[#fafafa] px-2 h-10 rounded-lg border-2 border-white placeholder:text-[#383D3B] ${error ? "outline-2 outline-red-500" : ""}`}
           type="text"
           id="barSearch"
           placeholder="Pesquisar fotos..."
