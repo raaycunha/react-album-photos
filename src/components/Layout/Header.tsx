@@ -55,7 +55,7 @@ const Header = () => {
           {isLoading ? "Buscando imagens..." : "Pesquisar"}
         </button>
       </form>
-      <div className="hidden border-1 border-solid border-white/50 rounded-xl py-2 md:block"></div>
+      <div className="hidden border border-white/50 rounded-xl py-2 md:block"></div>
       <select
         disabled={isLoading || isActive}
         className="bg-[#fafafa] text-[#0A0A0A] h-10 rounded-lg px-4"
