@@ -10,6 +10,7 @@ export const useAlbum = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const requestApi = async (searchUser: string) => {
     try {
+      setError(false);
       setIsLoading(true);
       const URL = "https://api.pexels.com/v1/search";
       const API_KEY = import.meta.env.VITE_PEXELS_API_KEY;
